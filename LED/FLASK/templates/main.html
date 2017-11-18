@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ title}}
+{% endblock title %}
+
+{% block header %}
+    <h1>State of green and red LED</h1>
+{% endblock header %}
+
+{% block content %}
+    {% for pin in pin_dict %}
+        {{ pin_dict[pin].led_colour }}
+        {% if pin_dict[pin].led_state == 0 %}
+            currently is OFF
+            </br>
+            </br>
+        {% else %}
+            currently is ON
+        {% endif%}
+    {% endfor %}
+{% endblock content %}
+
