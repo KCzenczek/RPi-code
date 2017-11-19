@@ -10,14 +10,19 @@
 
 {% block content %}
     {% for pin in pin_dict %}
+        <p>
         {{ pin_dict[pin].led_colour }}
         {% if pin_dict[pin].led_state == 0 %}
             currently is OFF
-            </br>
-            </br>
+            <hr />
         {% else %}
             currently is ON
         {% endif%}
+        </p>
     {% endfor %}
+    <p>
+        To change red led <a href='/red'>Click here</a><br/>
+        To change green led <a href='/green'>Click here</a>
+    </p>
 {% endblock content %}
 

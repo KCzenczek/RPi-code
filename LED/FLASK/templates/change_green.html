@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ title}}
+{% endblock title %}
+
+{% block header %}
+    <h1>State of green LED</h1>
+{% endblock header %}
+
+{% block content %}
+    <h2> {{ message }} </h2>
+    <div>
+        <p><b>Press to change</b></p>
+            <form method='post' action=' '>
+                <button type='submit' name='green_led_change' value='green_led'> Change </button>
+            </form>
+    </div>
+{% endblock content %}
+
