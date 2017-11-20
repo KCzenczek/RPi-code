@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ title }}
+{% endblock title %}
+
+{% block header %}
+    <h1>State of PIR motion detector</h1>
+{% endblock header %}
+
+{% block content %}
+    <p>
+        {{ message }} <br/>
+        {{ history[-1] }}
+    </p>
+    <h3>
+        Check the history of the last 10 detected movements<br/> or delete it
+    </h3>
+    <button type='submit' name='show_history' value='show_history'> Check </button>
+    <button type='submit' name='delete_history' value='detele_history'> Delete </button>
+{% endblock content %}
+
